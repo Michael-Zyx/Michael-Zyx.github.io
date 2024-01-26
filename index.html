@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Hexo</title>
-    <meta name="author" content="John Doe" />
+    <title>JohnTitorの博客</title>
+    <meta name="author" content="John Titor" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -167,7 +167,7 @@ mjx-container[display="true"] + br {
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/">
-            <span>HEXO</span>
+            <span>JOHNTITORの博客</span>
         </a>
         
         <a href="/">
@@ -199,7 +199,7 @@ mjx-container[display="true"] + br {
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;HEXO</span>
+            <span>&emsp;JOHNTITORの博客</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -267,7 +267,7 @@ mjx-container[display="true"] + br {
         <span class="loop"></span>
         <span class="info">
             <div class="wrap">
-                <h1>Hexo</h1>
+                <h1>JohnTitorの博客</h1>
                 <h3></h3>
                 <h5></h5>
             </div>
@@ -344,11 +344,38 @@ you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hex
         <div class="avatar">
             <img src="/images/avatar.jpg" alt="avatar" />
         </div>
-        <div class="name">John Doe</div>
+        <div class="name">John Titor</div>
         <div class="description">
-            <p>Description<br />
-...</p>
+            <p>时光流转，愿你能与重要之人重逢</p>
 
+        </div>
+        
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/michael-zyx">
+                    <i
+                        class="fa-brands fa-github fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="http://wpa.qq.com/msgrd?v=3&uin=3276959650&site=qq&menu=true">
+                    <i
+                        class="fa-brands fa-qq fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a href="mailto:3276959650@qq.com">
+                    <i
+                        class="fa-solid fa-envelope fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
         </div>
         
         
@@ -371,11 +398,11 @@ you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hex
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2024 Hexo
+            2022 - 2024 JohnTitorの博客
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
-            &commat;John Doe
+            &commat;John Titor
         </div>
         <div>
             Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
@@ -410,14 +437,3 @@ you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hex
 <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
 <script src="/js/fireworks.min.js"></script>
 
-#流星背景特效
-<canvas
-    id="background"
-    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"
-></canvas>
-<script src="/js/background.min.js"></script>
-
-#鼠标指针特效
-#<div id="cursor"></div>
-#<link rel="stylesheet" href="/css/cursor.min.css" />
-#<script src="/js/cursor.min.js"></script>
