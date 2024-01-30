@@ -156,6 +156,7 @@ mjx-container[display="true"] + br {
 }
 </style></head>
 <body>
+    <div id="background"></div>
     <div id="layout">
         <transition name="fade">
             <div id="loading" v-show="loading">
@@ -195,6 +196,11 @@ mjx-container[display="true"] + br {
         <a href="/tags">
             <i class="fa-solid fa-tags fa-fw"></i>
             <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/friends">
+            <i class="fa-solid fa-user-group fa-fw"></i>
+            <span>&ensp;Friends</span>
         </a>
         
     </nav>
@@ -248,6 +254,15 @@ mjx-container[display="true"] + br {
                             <i class="fa-solid fa-tags fa-fw"></i>
                         </div>
                         <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/friends">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-user-group fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Friends</div>
                     </div>
                 </a>
                 
@@ -368,13 +383,4 @@ mjx-container[display="true"] + br {
 <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
 <script src="/js/fireworks.min.js"></script>
 
-<head>
-  <script>
-    if (localStorage.getItem('theme') === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-        document.documentElement.classList.add("dark");
-    }
-  </script>
-</head>
+
