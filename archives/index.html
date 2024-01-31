@@ -38,6 +38,22 @@
 
 <link rel="stylesheet" href="/css/main.css" />
 
+    <script src="https://cdn.staticfile.org/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+    <link
+        rel="stylesheet" 
+        href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/github.min.css"
+    />
+    <link 
+        rel="stylesheet"
+        id="highlight-style-dark"
+        disabled
+        href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/github-dark.min.css"
+    />
+    <script src="/js/lib/highlight.js"></script>
+    
+    
+
 <meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
@@ -199,6 +215,11 @@ mjx-container[display="true"] + br {
             <span>&ensp;Friends</span>
         </a>
         
+        
+        <i class="fa-solid fa-fw theme-switcher" :class="theme=='auto'?'fa-circle-half-stroke':theme=='dark'?'fa-moon':'fa-sun'"
+            @click="handleThemeSwitch"></i>
+        ></i>
+        
     </nav>
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
@@ -262,6 +283,17 @@ mjx-container[display="true"] + br {
                     </div>
                 </a>
                 
+                
+                    <div class="item theme-switcher" @click="handleThemeSwitch">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fw theme-switcher"
+                            :class="theme=='auto'?'fa-circle-half-stroke':theme=='dark'?'fa-moon':'fa-sun'"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">
+                        Theme: {{ theme=='auto'?'Auto':theme=='dark'?'Dark':'Light' }}
+                    </div>
+                </div>
+                
             </div>
         </transition>
     </nav>
@@ -269,7 +301,6 @@ mjx-container[display="true"] + br {
 <transition name="fade">
     <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
 </transition>
-
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             
 <div id="archives">
@@ -339,11 +370,7 @@ mjx-container[display="true"] + br {
 </body>
 </html>
 
-<script src="/js/<file>"></script>
-<link rel="stylesheet" href="/css/<file>" />
-
-
-  
+ 
 <canvas
     id="fireworks"
     style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"
@@ -351,4 +378,13 @@ mjx-container[display="true"] + br {
 <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
 <script src="/js/fireworks.min.js"></script>
 
-
+<head>
+    <script>
+      if (localStorage.getItem('theme') === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+          document.documentElement.classList.add("dark");
+      }
+    </script>
+  </head>

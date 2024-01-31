@@ -867,6 +867,11 @@ body::-webkit-scrollbar-track {
     background: #111;
 } */
 
+::-moz-selection {
+    background-color: #3392ff2a;
+    color: unset;
+}
+
 ::selection {
     background-color: #3392ff2a;
     color: unset;
@@ -898,7 +903,9 @@ video,
 .katex,
 .language,
 .page-current {
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
 }
 
 b,
@@ -917,7 +924,9 @@ blockquote {
 }
 
 body {
+    transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
     background: var(--background-color);
