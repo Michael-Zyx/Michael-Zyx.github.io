@@ -12,6 +12,9 @@ const app = Vue.createApp({
         };
     },
     created() {
+        window.addEventListener("load", () => {
+            this.loading = false;
+        });
         if (this.theme === 'auto')
         this.isSystemDarkMode() ? this.setDarkMode(true) : this.setDarkMode(false);
       else
