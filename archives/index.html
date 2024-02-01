@@ -34,6 +34,8 @@
 
 
 
+<script src="/js/lib/search.js"></script>
+
 
 
 <link rel="stylesheet" href="/css/main.css" />
@@ -218,7 +220,7 @@ mjx-container[display="true"] + br {
         
         <i class="fa-solid fa-fw theme-switcher" :class="theme=='auto'?'fa-circle-half-stroke':theme=='dark'?'fa-moon':'fa-sun'"
             @click="handleThemeSwitch"></i>
-        ></i>
+        </i>
         
     </nav>
     <nav id="mobile-menu">
@@ -304,6 +306,8 @@ mjx-container[display="true"] + br {
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             
 <div id="archives">
+    
+    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
     
     <div id="timeline-wrap" ref="timeline">
         
